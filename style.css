@@ -1,0 +1,249 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Roboto', sans-serif;
+}
+
+*:focus {
+    outline: none;
+}
+
+body {
+    position: relative;
+    background: #f0f0f0;
+}
+
+.navbar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 60px;
+    background: #fff;
+    display: flex;
+    align-items: center;
+    padding: 0 2.5vw;
+}
+
+.toggle-btn {
+    width: 20px;
+    height: 10px;
+    position: relative;
+    cursor: pointer;
+}
+
+.toggle-btn span {
+    position: absolute;
+    width: 100%;
+    height: 2.5px;
+    top: 50%;
+    transform: translateY(-50%);
+    background: #979797;
+}
+
+.toggle-btn span:nth-child(1) {
+    top: 0;
+}
+
+.toggle-btn span:nth-child(3) {
+    top: 100%;
+}
+
+.logo {
+    height: 60px;
+    width: auto;
+    margin: 0px 30px 0;
+}
+
+.search-box {
+    position: relative;
+    max-width: 500px;
+    width: 50%;
+    height: 35px;
+    display: flex;
+}
+
+.search-bar {
+    width: 85%;
+    height: 100%;
+    border: 2px solid #dbdbdb;
+    padding: 0 20px;
+    font-size: 16px;
+    text-transform: uppercase
+}
+
+.search-btn {
+    width: 20%;
+    height: 100%;
+    background: #f0f0f0;
+    border: 2px solid #dbdbdb;
+    padding: 5px 0;
+    border-left: none;
+}
+
+#search-icon {
+    font-size: 1.3rem;
+    opacity: 0.5;
+}
+
+.user-options {
+    height: 35px;
+    display: flex;
+    margin-left: auto;
+    align-items: center;
+}
+
+.user-options .icon {
+    height: 70%;
+    margin-right: 20px;
+}
+
+.user-dp {
+    cursor: pointer;
+    height: 35px;
+    width: 35px;
+    border-radius: 50%;
+    overflow: hidden;
+}
+
+.user-dp img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+}
+
+.side-bar {
+    position: fixed;
+    top: 60px;
+    left: 0;
+    min-width: 220px;
+    width: 220px;
+    height: calc(100vh - 60px);
+    background: #fff;
+    padding: 10px;
+}
+
+.links {
+    display: block;
+    width: 100%;
+    padding: 10px 20px;
+    display: flex;
+    align-items: center;
+    color: #242424;
+    font-size: 16px;
+    font-weight: 500;
+    text-decoration: none;
+}
+
+.links img {
+    height: 30px;
+    margin-right: 10px;
+}
+
+.links:hover, links:active {
+    background: rgba(0, 0, 0, 0.1);
+}
+
+.seperator {
+    border: none;
+    border-bottom: 1px solid #dbdbdb;
+    margin: 20px 0;
+}
+
+.filters {
+    position: fixed;
+    left: 220px;
+    top: 60px;
+    width: calc(100vw - 20px);
+    height: 60px;
+    background: #fff;
+    border-top: 1px solid #dbdbdb;
+    border-bottom: 1px solid #dbdbdb;
+    padding: 0 20px;
+    display: flex;
+    align-items: center;
+    overflow-x: auto;
+    overflow-y: hidden;
+}
+
+.filters::-webkit-scrollbar {
+    display: none;
+}
+.filters .filter-option {
+    flex: 0 0 auto;
+    padding: 10px 15px 10px 15px;
+    border-radius: 50px;
+    background: #f0f0f0;
+    border: 1px solid #dbdbdb;
+    margin-right: 10px;
+    color: #242424;
+    font-size: 15px;
+    cursor: pointer;
+}
+
+.filter-option.active {
+    background: #242424;
+    border: 1px solid #dbdbdb;
+    color: #fff;
+}
+
+.video-container {
+    width: calc(100vw - 220px);
+    margin-left: 220px;
+    margin-top: 120px;
+    padding: 20px;
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    grid-gap: 20px 20px;
+    overflow-x: hidden;
+    overflow-x: scroll;
+}
+
+.video-container::-webkit-scrollbar {
+    display: none;
+}
+
+.video {
+    min-height: 300px;
+    height: auto;
+}
+
+.thumbnail {
+    width: 100%;
+    height: 180px;
+    object-fit: cover;
+    cursor: pointer;
+}
+
+.content {
+    width: 100%;
+    height: 100px;
+    padding: 10px;
+    display: flex;
+    justify-content: space-between;
+    cursor: pointer;
+}
+
+.channel-icon {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    object-fit: cover;
+    margin-right: 10px;
+    cursor: pointer;
+}
+
+.title {
+    width: 100%;
+    height: 39.5px;
+    overflow: hidden;
+    cursor: pointer;
+}
+
+.channel-name {
+    font-size: 14px;
+    margin: 2px 0;
+    color: #242424;
+    cursor: pointer;
+}
